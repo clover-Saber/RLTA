@@ -5,17 +5,20 @@
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 192rpx;
-  height: 192rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: rgb(3, 3, 3);
+input {
+  margin-top: 20px;
+  outline-style: none ; /*取消外边框*/
+  border: 1px solid #ccc; /*设置灰色 1px的边框 */
+  border-radius: 3px; /*设置边框圆角效果*/
+  padding: 13px 14px; /*高度*/
+  width: 100%; /*宽度*/
+  font-size: 14px; /*字体大小*/
 }
 
 .login {
-  margin-top: 180px;
+  margin-top: 50px;
+}
+
+navigator {
+  margin-top: 20px;
 }

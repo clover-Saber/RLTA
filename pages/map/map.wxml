@@ -1,2 +1,5 @@
 <!--pages/map/map.wxml-->
 <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location style="width: 100%; height: 300px;"></map>
+<view wx:for="{{array}}" wx:for-item="i">
+  <text>{{i}}</text>
+</view>

@@ -1,0 +1,55 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <view class="page-body">
+      <view class="page-section-title">1.性别</view>
+      <radio-group name="gender" bindchange="getGender">
+        <label><radio value="01"/>男</label>
+        <label><radio value="02"/>女</label>
+      </radio-group>
+
+      <view class="page-section-title">2.年龄</view>  
+      <view class='ms-content-box'>
+        <view class='top-selected' bindtap='selectAgeTaps'>
+          <view class='ms-text'>{{selectAgeDatas[ageIndex]}}</view>
+          <view class="{{ageShow ? 'icon-up' : 'icon-down'}}"></view>
+        </view>
+        <view class='select_box' wx:if="{{ageShow}}">
+          <view class='option' wx:for="{{selectAgeDatas}}" data-index="{{index}}" wx:key='index' class='ms-option' bindtap='optionAgeTaps'>{{item}}</view>
+        </view>
+      </view>
+
+      <view class="page-section-title">3.户籍</view>  
+      <view class='ms-content-box'>
+        <view class='top-selected' bindtap='selectAreaTaps'>
+          <view class='ms-text'>{{selectAreaDatas[areaIndex]}}</view>
+          <view class="{{areaShow ? 'icon-up' : 'icon-down'}}"></view>
+        </view>
+        <view class='select_box' wx:if="{{areaShow}}">
+          <view class='option' wx:for="{{selectAreaDatas}}" data-index="{{index}}" wx:key='index' class='ms-option' bindtap='optionAreaTaps'>{{item}}</view>
+        </view>
+      </view>
+
+      <view class="page-section-title">4.月收入</view> 
+      <input class="weui-input" name="income" bindinput="getIncome" placeholder=""/>
+      <view class="page-section-title">5.居住小区名称</view> 
+      <input class="weui-input" name="home" bindinput="getHome" placeholder="上海市杨浦区同济大学彰武2号楼"/>
+      <view class="page-section-title">6.手机号码</view> 
+      <input class="weui-input" name="tel" bindinput="getTel" placeholder=""/>
+
+      <view class="page-section-title">7.现居城市</view>  
+      <view class='ms-content-box'>
+        <view class='top-selected' bindtap='selectCityTaps'>
+          <view class='ms-text'>{{selectAreaDatas[cityIndex]}}</view>
+          <view class="{{cityShow ? 'icon-up' : 'icon-down'}}"></view>
+        </view>
+        <view class='select_box' wx:if="{{cityShow}}">
+          <view class='option' wx:for="{{selectAreaDatas}}" data-index="{{index}}" wx:key='index' class='ms-option' bindtap='optionCityTaps'>{{item}}</view>
+        </view>
+      </view>
+      <view class="page-section-title">8.设置密码</view> 
+      <input class="weui-input" password name="password1" bindinput="getPassword1" placeholder="密码6位数"/>
+      <view class="page-section-title">9.确认密码</view> 
+      <input class="weui-input" password name="password2" bindinput="getPassword2" placeholder="密码6位数"/>
+      <button class="register" type="primary" bindtap="registerTap"> 注册 </button>
+  </view>
+</view>

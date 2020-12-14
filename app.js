@@ -36,5 +36,6 @@ App({
   //全局信息
   globalData: {
     userInfo: null,
+    server: 'https://rlta.4eversun.icu:8080',
   }
 })

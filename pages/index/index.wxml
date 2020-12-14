@@ -1,11 +1,11 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <block wx:if="{{!hasUserInfo}}"> 
+      <input type="text" bindinput="getUserName" placeholder="账号" />
+      <input password type="text" bindinput="getPassWord" placeholder="密码" />
+      <button class="login" type="primary" bindtap="bindMapTap"> 登录 </button>
+      <navigator url="../register/register" redirect>立即注册</navigator >
     </block>
   </view>
-  <button class="login" type="primary" bindtap="bindMapTap"> 一键登录 </button>
 </view>

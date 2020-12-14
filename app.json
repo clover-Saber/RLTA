@@ -1,8 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/register/register"
   ],
+  "requiredBackgroundModes": [
+    "location" 
+    ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -14,6 +18,5 @@
       "desc": "请开启您的位置授权"
     }
   },
-  "sitemapLocation": "sitemap.json",
-  "workers": "workers"
+  "sitemapLocation": "sitemap.json"
 }
