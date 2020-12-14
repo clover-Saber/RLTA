@@ -1,5 +1,11 @@
 <!--pages/map/map.wxml-->
-<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location style="width: 100%; height: 300px;"></map>
-<view wx:for="{{array}}" wx:for-item="i">
-  <text>{{i}}</text>
+<view class="div-map">
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location style="width: 100%; height: 100%;">
+    <view class="div-tips">
+      操作说明
+    </view>
+    <view class="div-servey">
+      <button type="primary" bindtap="bindServeyTap">点击完成问卷</button>
+    </view>
+  </map>
 </view>

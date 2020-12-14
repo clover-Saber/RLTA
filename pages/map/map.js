@@ -70,5 +70,8 @@ Page({
       }
      })
   },
+  bindServeyTap: function() {
+    
+  }
 
 })
