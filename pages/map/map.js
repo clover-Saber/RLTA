@@ -12,7 +12,9 @@ Page({
     //初始值
     latitude: {},
     longitude: {},
-    array: []
+    array: [],
+    imageSrc: {},
+    imageShow: false,
   },
 
   //特定时间格式
@@ -70,6 +72,16 @@ Page({
       }
      })
   },
+
+  bindTipsTap: function(t) {
+    var tsrc='../images/'+t
+    console.log('src: '+tsrc)
+    this.setData({
+      imageShow: true,
+      imageSrc: tsrc,
+    })
+  },
+
   bindServeyTap: function() {
     
   }
